@@ -113,7 +113,7 @@ select distinct(customer_status), avg(flight_milage)
 from customer
 inner join flight
 on customer.flight_number = flight.flight_number_id
-order by customer_status;
+group by customer_status;
 
 -- In the Airline database write the SQL script to find the most often booked aircraft by gold status members (this should require a join).
 select customer_status, max(aircraft)
